@@ -60,13 +60,13 @@ const profileSchema = new mongoose.Schema({
   },
 
   // profile image
-  profilePicture: {
+ profilePicture: {
 
-    type: String,
+type: String,
 
-    default: ""
+default: "https://i.pravatar.cc/150"
 
-  },
+},
 
   // skills
   skills: [
@@ -74,6 +74,64 @@ const profileSchema = new mongoose.Schema({
     skillSchema
 
   ],
+// experience
+  experience:[
+
+{
+
+company:String,
+
+role:String,
+
+year:String
+
+}
+
+],
+
+careerVision: {
+
+careerGoal: String,
+
+growingAs: String,
+
+domain: String
+
+},
+
+// education
+education:[
+
+{
+
+college:String,
+
+degree:String,
+
+year:String
+
+}
+
+],
+
+certifications:[
+  {
+
+title: String,
+
+company: String,
+
+year: String
+
+}
+],
+
+darkMode:{
+
+type:Boolean,
+default:false
+
+},
 
   // social links
   socialLinks: {
@@ -97,6 +155,8 @@ const profileSchema = new mongoose.Schema({
   }
 
 },
+
+
 
 {
 
