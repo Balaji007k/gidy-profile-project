@@ -101,9 +101,6 @@ profile.name = req.body.name || profile.name;
 
 profile.bio = req.body.bio || profile.bio;
 
-// profile.profilePicture =
-// req.body.profilePicture || profile.profilePicture;
-
 profile.socialLinks = {
 
 linkedin:
@@ -286,28 +283,6 @@ exports.endorseSkill = async (req, res) => {
 };
 
 // Top skill
-// exports.getTopSkill = async (req,res)=>{
-
-// const profile = await Profile.findOne({
-// user:req.user.id
-// });
-
-// if (!profile) {
-
-// return res.status(404).json({
-// message: "Profile not found"
-// });
-
-// }
-
-// const topSkill = profile.skills.sort(
-// (a,b)=>b.endorsements-a.endorsements
-// )[0];
-
-// res.json(topSkill);
-
-// }
-
 exports.getTopSkill = async (req,res)=>{
 
 try{
@@ -489,19 +464,6 @@ res.json(profile);
 }
 
 // update career vision
-// exports.updateCareerVision = async (req,res)=>{
-
-// const profile = await Profile.findOne({
-// user:req.user.id
-// });
-
-// profile.careerVision = req.body.careerVision;
-
-// await profile.save();
-
-// res.json(profile);
-
-// }
 exports.updateCareerVision = async (req,res)=>{
 
 try{

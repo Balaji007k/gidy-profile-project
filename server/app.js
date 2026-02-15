@@ -7,13 +7,28 @@ const cors = require("cors");
 const app = express();
 
 // enable cors
+const cors = require("cors");
+
 app.use(cors({
-    origin: [
-        'http://localhost:5173',          // local dev
-        'https://balaji007k.github.io'    // GitHub Pages live site
-    ],
-    credentials: true
+
+origin: [
+
+'http://localhost:5173',
+
+'https://balaji007k.github.io',
+
+'https://api-gidy-profile-project.onrender.com'
+
+],
+
+methods: ["GET","POST","PUT","DELETE"],
+
+credentials: true
+
 }));
+
+// VERY IMPORTANT
+app.options("*", cors());
 
 // middleware to accept JSON data
 app.use(express.json());
