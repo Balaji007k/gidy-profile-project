@@ -9,7 +9,7 @@ useEffect(()=>{
 
 fetchSkill();
 
-},[]);
+},[profile]);
 
 const fetchSkill = async()=>{
 

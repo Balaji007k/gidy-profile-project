@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 const Navbar = ({ profile })=>{
+
+    const navigate = useNavigate();
 
 return(
 
@@ -15,7 +19,7 @@ Gidy Clone
 onClick={()=>{
 
 localStorage.removeItem("token");
-window.location="/login"
+navigate("/login");
 
 }}
 

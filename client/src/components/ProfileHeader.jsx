@@ -107,13 +107,12 @@ ${profile.darkMode
 
 {/* IMAGE */}
 <img
-src={`https://api-gidy-profile-project.onrender.com/${profile.profilePicture}`}
-onError={(e)=>{
-
-e.target.src="/images/default User.jpg"
-
-}}
-className="w-16 h-16 rounded-full object-cover"
+  src={`https://api-gidy-profile-project.onrender.com/${profile.profilePicture}`}
+  onError={(e) => {
+    e.target.onerror = null; // stop infinite loop
+    e.target.src = "/images/default User.jpg";
+  }}
+  className="w-16 h-16 rounded-full object-cover"
 />
 
 
